@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <base href="/E-Commerce">
+  <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -11,30 +11,33 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="example">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" href="/E-Commerce/icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="/E-Commerce/favicon.png"/>
 
   <title>example</title>
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/E-Commerce/manifest.json">
 
   <script>
     // The value below is injected by flutter build, do not touch.
     const serviceWorkerVersion = "1885668302";
   </script>
   <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
-  <script type="module" src="./assets/packages/flutter_3d_controller/assets/model-viewer.min.js" defer></script>
+  <script src="/E-Commerce/flutter.js" defer></script>
+  <script type="module" src="/E-Commerce/assets/packages/flutter_3d_controller/assets/model-viewer.min.js" defer></script>
 </head>
 <body>
   <script>
+    console.log("Loading flutter.js");
+    console.log("Loading model-viewer.min.js");
+
     window.addEventListener('load', function(ev) {
-      // Download main.dart.js
+      // Temporarily commenting out the service worker
       _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
+        // serviceWorker: {
+        //   serviceWorkerVersion: serviceWorkerVersion,
+        // },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine().then(function(appRunner) {
             appRunner.runApp();
